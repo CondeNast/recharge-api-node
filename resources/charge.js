@@ -100,4 +100,16 @@ Charge.prototype.removeDiscount = function removeDiscount(charge_id, params){
   return this.recharge.request(url, 'POST', this.key, params);
 }
 
+/**
+ * Process the charge using ChargeID.
+ *
+ * @param {Number} id Charge ID
+ * @return {Promise} Promise that resolves with the result
+ * @public
+ */
+Charge.prototype.process = function processCharge(charge_id){
+  const url = this.buildUrl(charge_id, undefined, 'process');
+  return this.recharge.request(url, 'POST', this.key, charge_id);
+}
+
 module.exports = Charge;
