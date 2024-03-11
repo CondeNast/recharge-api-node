@@ -111,6 +111,7 @@ recharge.subscription
   - `refund(id, params)`
   - `addDiscount(id, params)`
   - `removeDiscount(id, params)`
+  - `processCharge(id)`
 - [checkout - BETA](https://developer.rechargepayments.com/#checkouts-pro) - **query_params object can be used in case of partial_shipping ex: {partial_shipping: 1}
   - `get(checkout_token[, params])`
   - `create(params[, query_params])`
